@@ -129,4 +129,16 @@ document.addEventListener('DOMContentLoaded', () => {
     videos.forEach(video => {
         videoObserver.observe(video);
     });
+    const thumb = document.getElementById("videoThumbnail");
+    const video = document.getElementById("perfumaticVideo");
+    
+    if (thumb && video) {
+      thumb.addEventListener("click", function () {
+        thumb.style.display = "none";
+        video.style.display = "block";
+        video.play();
+      });
+    }
+        
 });
+
